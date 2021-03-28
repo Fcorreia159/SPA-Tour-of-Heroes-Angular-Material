@@ -1,0 +1,16 @@
+<p>
+    <mat-toolbar>
+      <span>
+        <h2>My Heroes</h2>
+      </span>
+    </mat-toolbar>
+</p>
+
+<mat-selection-list [multiple]="false">
+   <mat-list-option *ngFor="let hero of heroes" > 
+        <a routerLink="/detail/{{hero.id}}"> 
+            <span >{{hero.id}}</span> {{hero.name}}
+        </a>  
+   </mat-list-option>
+    
+</mat-selection-list>
